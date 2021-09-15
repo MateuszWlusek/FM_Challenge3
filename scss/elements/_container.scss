@@ -16,6 +16,10 @@
         background-color: $tablet-bgc-color;
     }
 
+    @include desktop {
+        background-image: url(../assets/desktop/image-host.jpg);
+        background-position-y: center;
+    }
 
     .logo {
         margin-top: 10vh;
@@ -26,6 +30,11 @@
             top: 0;
             left: 0;
             padding: 5rem 4rem;
+        }
+
+        @include desktop {
+            margin: 5vh 0 0 5%;
+            padding: 5rem 0;
         }
     }
 
@@ -46,6 +55,13 @@
             justify-content: space-between;
         }
 
+        @include desktop {
+            width: 55%;
+            bottom: 14%;
+            left: 5%;
+            justify-content: flex-end;
+        }
+
         [class^='title_line'] {
             font-family: 'Chivo', sans-serif;
             font-weight: 300;
@@ -58,6 +74,10 @@
                 font-size: 4.8rem;
                 line-height: 5.6rem;
                 text-align: left;
+            }
+
+            @include desktop {
+                font-size: 5vh;
             }
         }
 
@@ -76,7 +96,7 @@
             line-height: 2.5rem;
             color: $main_description-txt-color;
             text-align: center;
-            padding: 2rem 0;
+            padding: 1rem 0;
 
             @include tablet {
                 width: 65%;
@@ -84,10 +104,14 @@
                 font-size: 1.8rem;
                 line-height: 2.8rem;
             }
+
+            @include desktop {
+                font-size: 2vh;
+            }
         }
 
         .sourcesLogos {
-            max-width: 90%;
+            width: 90%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -97,6 +121,12 @@
             @include tablet {
                 order: 2;
                 margin: 0;
+                padding: 0;
+            }
+
+            @include desktop {
+                margin-top: 5vh;
+                width: 75%;
             }
 
             img {
@@ -117,6 +147,10 @@
             @include tablet {
                 align-items: flex-start;
                 flex-direction: row;
+            }
+
+            @include desktop {
+                margin-top: 2vh;
             }
 
             .email_input {
@@ -170,6 +204,12 @@
             position: absolute;
             bottom: 0;
             left: 5%;
+        }
+
+        @include desktop {
+            left: auto;
+            right: 0;
+            bottom: calc(15% - 5.2rem);
         }
     }
 }

@@ -28,6 +28,12 @@ html {
     background-color: #121726;
   }
 }
+@media screen and (min-width: 1024px) {
+  .container {
+    background-image: url(../assets/desktop/image-host.jpg);
+    background-position-y: center;
+  }
+}
 .container .logo {
   margin-top: 10vh;
 }
@@ -38,6 +44,12 @@ html {
     top: 0;
     left: 0;
     padding: 5rem 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container .logo {
+    margin: 5vh 0 0 5%;
+    padding: 5rem 0;
   }
 }
 .container .box {
@@ -58,6 +70,14 @@ html {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1024px) {
+  .container .box {
+    width: 55%;
+    bottom: 14%;
+    left: 5%;
+    justify-content: flex-end;
+  }
+}
 .container .box [class^=title_line] {
   font-family: "Chivo", sans-serif;
   font-weight: 300;
@@ -73,6 +93,11 @@ html {
     text-align: left;
   }
 }
+@media screen and (min-width: 1024px) {
+  .container .box [class^=title_line] {
+    font-size: 5vh;
+  }
+}
 .container .box .title_line1 {
   color: #56e6af;
 }
@@ -86,7 +111,7 @@ html {
   line-height: 2.5rem;
   color: white;
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
   .container .box .mainDescription {
@@ -96,8 +121,13 @@ html {
     line-height: 2.8rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .container .box .mainDescription {
+    font-size: 2vh;
+  }
+}
 .container .box .sourcesLogos {
-  max-width: 90%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,6 +138,13 @@ html {
   .container .box .sourcesLogos {
     order: 2;
     margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container .box .sourcesLogos {
+    margin-top: 5vh;
+    width: 75%;
   }
 }
 .container .box .sourcesLogos img {
@@ -126,6 +163,11 @@ html {
   .container .box form {
     align-items: flex-start;
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container .box form {
+    margin-top: 2vh;
   }
 }
 .container .box form .email_input {
@@ -177,5 +219,12 @@ html {
     position: absolute;
     bottom: 0;
     left: 5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container .dots_pattern {
+    left: auto;
+    right: 0;
+    bottom: calc(15% - 5.2rem);
   }
 }
