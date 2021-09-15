@@ -14,24 +14,49 @@ html {
   flex-direction: column;
   align-items: center;
   position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background-image: linear-gradient(rgba(18, 23, 38, 0.9), rgba(18, 23, 38, 0.9)), url(../assets/mobile/image-host-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.container .background_img {
-  display: none;
-  width: 100%;
-  height: 100%;
+@media screen and (min-width: 768px) {
+  .container {
+    background-image: url(../assets/tablet/image-host-tablet.jpg);
+    background-size: 65% 70%;
+    background-position: top right;
+    background-color: #121726;
+  }
 }
 .container .logo {
-  padding: 5rem 0;
+  margin-top: 10vh;
+}
+@media screen and (min-width: 768px) {
+  .container .logo {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5rem 4rem;
+  }
 }
 .container .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 90%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .container .box {
+    position: absolute;
+    z-index: 1;
+    background-color: #121726;
+    transform-origin: bottom left;
+    bottom: 29%;
+    height: 50%;
+    justify-content: space-between;
+  }
 }
 .container .box [class^=title_line] {
   font-family: "Chivo", sans-serif;
@@ -39,6 +64,14 @@ html {
   font-size: 2.6rem;
   line-height: 3.8rem;
   text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .container .box [class^=title_line] {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    text-align: left;
+  }
 }
 .container .box .title_line1 {
   color: #56e6af;
@@ -55,36 +88,69 @@ html {
   text-align: center;
   padding: 2rem 0;
 }
+@media screen and (min-width: 768px) {
+  .container .box .mainDescription {
+    width: 65%;
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
 .container .box .sourcesLogos {
-  width: 90%;
+  max-width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 5rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container .box .sourcesLogos {
+    order: 2;
+    margin: 0;
+  }
 }
 .container .box .sourcesLogos img {
-  width: 100%;
+  width: 24%;
 }
 .container .box .sourcesLogos :nth-child(2),
 .container .box .sourcesLogos :nth-child(3) {
   padding: 0 1rem;
 }
-.container .box .email_input {
+.container .box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .container .box form {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+.container .box form .email_input {
   width: 90%;
   height: 5rem;
   border-radius: 5rem;
   background-color: #2b334a;
   border: none;
   padding-left: 2rem;
-  margin-bottom: 1rem;
+  margin: 0 auto;
 }
-.container .box ::placeholder {
+@media screen and (min-width: 768px) {
+  .container .box form .email_input {
+    margin: 0;
+    width: 65%;
+    height: 6rem;
+  }
+}
+.container .box form ::placeholder {
   font-family: "Chivo", sans-serif;
   font-weight: 700;
   color: #c2cbe5;
   font-size: 1.4rem;
 }
-.container .box .submit_btn {
+.container .box form .submit_btn {
   width: 90%;
   height: 5rem;
   border-radius: 5rem;
@@ -94,4 +160,22 @@ html {
   font-family: "Chivo", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 768px) {
+  .container .box form .submit_btn {
+    width: 30%;
+    margin: 0.5rem 0 0.5rem -30.5%;
+  }
+}
+.container .dots_pattern {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .container .dots_pattern {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+  }
 }
