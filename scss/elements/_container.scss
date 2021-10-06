@@ -143,10 +143,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
 
             @include tablet {
-                align-items: flex-start;
                 flex-direction: row;
+                align-items: flex-start;
             }
 
             @include desktop {
@@ -156,6 +157,9 @@
             .email_input {
                 width: 90%;
                 height: 5rem;
+                color: $email_textarea-text-color;
+                font-family: 'Chivo', sans-serif;
+                font-weight: 700;
                 border-radius: 5rem;
                 background-color: $email_input-bgc-color;
                 border: none;
@@ -192,6 +196,15 @@
                     width: 30%;
                     margin: .5rem 0 .5rem -30.5%;
                 }
+            }
+
+            .submit_error {
+                position: absolute;
+                bottom: -20px;
+                left: 2rem;
+                color: $email_request-text-color;
+                font-family: 'Chivo', sans-serif;
+                font-weight: 700;
             }
         }
     }

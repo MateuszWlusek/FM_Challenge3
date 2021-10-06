@@ -158,11 +158,12 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .container .box form {
-    align-items: flex-start;
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -173,6 +174,9 @@ html {
 .container .box form .email_input {
   width: 90%;
   height: 5rem;
+  color: white;
+  font-family: "Chivo", sans-serif;
+  font-weight: 700;
   border-radius: 5rem;
   background-color: #2b334a;
   border: none;
@@ -209,6 +213,14 @@ html {
     width: 30%;
     margin: 0.5rem 0 0.5rem -30.5%;
   }
+}
+.container .box form .submit_error {
+  position: absolute;
+  bottom: -20px;
+  left: 2rem;
+  color: #fb3c3c;
+  font-family: "Chivo", sans-serif;
+  font-weight: 700;
 }
 .container .dots_pattern {
   display: none;
